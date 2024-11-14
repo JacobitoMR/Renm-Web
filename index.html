@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos Anticonceptivos y Su Historia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Métodos Anticonceptivos y Su Historia</h1>
+        <p>Explora la evolución y aprende sobre los métodos anticonceptivos a través del tiempo.</p>
+    </header>
+
+    <!-- Introducción -->
+    <section class="section">
+        <h2>Introducción</h2>
+        <p>Desde la antigüedad hasta nuestros días, los métodos anticonceptivos han cambiado drásticamente. Esta página explora su evolución a lo largo de la historia y proporciona información clave sobre diferentes métodos actuales.</p>
+    </section>
+
+    <!-- Línea de Tiempo -->
+    <section class="section timeline">
+        <h2>Línea de Tiempo</h2>
+        <div class="period">
+            <h3>Métodos Antiguos</h3>
+            <p>En las antiguas civilizaciones, se usaban métodos rudimentarios, como hierbas y compuestos naturales, que eran poco efectivos.</p>
+        </div>
+        <div class="period">
+            <h3>Edad Media y Renacimiento</h3>
+            <p>La moral y religión influenciaban las prácticas de anticoncepción, usando métodos caseros poco fiables.</p>
+        </div>
+        <div class="period">
+            <h3>Siglo XIX: Revolución Industrial</h3>
+            <p>La ciencia avanzó, introduciendo preservativos de látex y métodos más seguros.</p>
+        </div>
+        <div class="period">
+            <h3>Siglo XX: La Píldora Anticonceptiva</h3>
+            <p>La píldora revolucionó el control de la natalidad, permitiendo a las mujeres decidir sobre su fertilidad.</p>
+        </div>
+    </section>
+
+    <!-- Preguntas Frecuentes -->
+    <section class="section faq">
+        <h2>Preguntas Frecuentes</h2>
+        <h3 onclick="toggleAnswer(0)">¿Qué métodos anticonceptivos existen hoy en día?</h3>
+        <p>Hoy en día, los métodos incluyen anticonceptivos hormonales, preservativos, DIU, y métodos naturales.</p>
+        <h3 onclick="toggleAnswer(1)">¿Qué tan efectivo es cada método?</h3>
+        <p>La efectividad varía: los métodos hormonales y el DIU tienen alta efectividad, mientras que los naturales son menos confiables.</p>
+    </section>
+
+    <!-- Cuestionario -->
+    <section class="section quiz">
+        <h2>Prueba tus Conocimientos</h2>
+        <div id="quiz-container">
+            <p id="question">¿En qué siglo se popularizó la píldora anticonceptiva?</p>
+            <button class="answer" onclick="checkAnswer(20)">Siglo XX</button>
+            <button class="answer" onclick="checkAnswer(10)">Siglo XIX</button>
+            <button class="answer" onclick="checkAnswer(0)">Siglo XVIII</button>
+            <p id="result"></p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 - Historia de los Métodos Anticonceptivos</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleAnswer(index) {
+            const answers = document.querySelectorAll('.faq p');
+            answers[index].style.display = answers[index].style.display === 'block' ? 'none' : 'block';
+        }
+
+        function checkAnswer(score) {
+            const resultElement = document.getElementById('result');
+            if (score === 20) {
+                resultElement.textContent = '¡Correcto! La píldora se popularizó en el siglo XX.';
+                resultElement.style.color = 'green';
+            } else {
+                resultElement.textContent = 'Incorrecto. Intenta de nuevo.';
+                resultElement.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* Fondo y tipografía general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Gris claro */
+    color: #333333; /* Gris oscuro */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Pantalla de bienvenida */
+.welcome-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1c; /* Fondo negro */
+    color: #ffffff;
+    flex-direction: column;
+    text-align: center;
+}
+
+.welcome-screen .welcome-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.welcome-screen .welcome-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.welcome-screen .welcome-content button {
+    background-color: #0044cc; /* Azul fuerte */
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.welcome-screen .welcome-content button:hover {
+    background-color: #0033aa; /* Azul más oscuro */
+}
+
+/* Estilos del contenido principal después de ingresar */
+.main-content {
+    display: none;
+}
+
+/* Encabezado */
+header {
+    background-color: #1c1c1c; /* Negro */
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Ajuste del contenido para header fijo */
+main {
+    margin-top: 80px;
+}
+
+/* Navegación dentro del encabezado */
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #cccccc; /* Gris claro para resaltar */
+    transform: scale(1.1);
+}
+
+/* Secciones */
+section {
+    background-color: #ffffff; /* Blanco */
+    color: #333333; /* Gris oscuro */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+/* Animación de aparición para las secciones */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+/* Botón "Volver arriba" */
+.boton-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #1c1c1c; /* Negro */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.boton-arriba:hover {
+    background-color: #666666; /* Gris medio */
+    transform: scale(1.1);
+}
+
+/* Secciones interactivas con hover */
+section:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aumentar sombra */
+    transform: scale(1.02); /* Ampliar ligeramente */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}

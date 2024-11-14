@@ -1,0 +1,20 @@
+.boton-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.boton-arriba:hover {
+    background-color: #555;
+}
